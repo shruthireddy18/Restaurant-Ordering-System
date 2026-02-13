@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Restaurant Ordering System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- AUTH -->
+<div class="auth-container" id="authSection">
+  <div class="auth-box">
+    <h2 id="authTitle">Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="handleAuth()">Login</button>
+    <p onclick="toggleAuth()">Don't have an account? Register</p>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="restaurantSection" style="display:none;">
+
+<header>
+🍽️ Delish Dine
+<span class="logout" onclick="logout()">Logout</span>
+</header>
+
+<div class="container">
+
+<div class="card"><img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5"><h3>Burger Combo</h3><p>₹150</p><button onclick="addToCart('Burger Combo',150)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9"><h3>Alfredo Pasta</h3><p>₹220</p><button onclick="addToCart('Alfredo Pasta',220)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1548365328-9c5f9d8a8a5d"><h3>Cheese Pizza</h3><p>₹300</p><button onclick="addToCart('Cheese Pizza',300)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1604908554161-48b6b3efb4d1"><h3>French Fries</h3><p>₹120</p><button onclick="addToCart('French Fries',120)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349"><h3>Grilled Chicken</h3><p>₹280</p><button onclick="addToCart('Grilled Chicken',280)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"><h3>Veg Sandwich</h3><p>₹140</p><button onclick="addToCart('Veg Sandwich',140)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"><h3>Cold Coffee</h3><p>₹100</p><button onclick="addToCart('Cold Coffee',100)">Add</button></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b"><h3>Chocolate Dessert</h3><p>₹160</p><button onclick="addToCart('Chocolate Dessert',160)">Add</button></div>
+
+</div>
+
+<div class="cart">
+<h2>🛒 Cart</h2>
+<ul id="cartItems"></ul>
+<p>Subtotal: <span id="subTotal">₹0</span></p>
+<p>GST (5%): <span id="gst">₹0</span></p>
+<p>Discount (10%): <span id="discount">₹0</span></p>
+<h3>Total: <span id="finalTotal">₹0</span></h3>
+<button class="checkout" onclick="checkout()">Checkout</button>
+</div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
